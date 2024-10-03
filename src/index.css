@@ -1,13 +1,92 @@
+/* PasswordStrengthChecker.css */
+
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%; /* Make it responsive */
+  max-width: 400px; /* Limit max width */
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px; /* Increased font size */
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for shadow */
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+  outline: none;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+}
+
+/* Strength Message Colors */
+p {
+  color: #333; /* Default color */
+}
+
+p:empty {
+  color: transparent; /* Hide when empty */
+}
+
+p:before {
+  content: "Strength: "; /* Add prefix */
+}
+
+p.weak {
+  color: red; /* Weak strength color */
+}
+
+p.medium {
+  color: orange; /* Medium strength color */
+}
+
+p.strong {
+  color: green; /* Strong strength color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  section {
+    padding: 20px; /* Reduced padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Adjusted heading size for mobile */
+  }
+
+  input {
+    padding: 10px; /* Adjusted padding for mobile */
+  }
+
+  p {
+    font-size: 18px; /* Adjusted paragraph size for mobile */
+  }
 }
