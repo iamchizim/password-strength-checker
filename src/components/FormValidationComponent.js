@@ -98,6 +98,7 @@ const FormValidationComponent = () => {
   return (
     <section>
       <form onSubmit={handleSubmit}>
+        <h2>FORM VALIDATION</h2>
         <label>Username</label>
         <input type="text" value={username} onChange={handleUsernameChange} />
         {usernameError && <p style={{ color: "red" }}>{usernameError}</p>}
@@ -108,7 +109,7 @@ const FormValidationComponent = () => {
         <input type="text" value={email} onChange={handleEmailChange} />
         {emailError && <p style={{ color: "red" }}>{emailError}</p>}
         <button type="submit">Submit</button>
-        <div>{result}</div>
+        <div id="result">{result}</div>
       </form>
     </section>
   );
